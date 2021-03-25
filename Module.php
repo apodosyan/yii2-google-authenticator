@@ -23,7 +23,7 @@ class Module extends \yii\base\Module
     {
         parent::init();
 
-        if($this->twoStepVerification && !Yii::$app->user->isGuest && Yii::$app->user->identity->authenticator) {
+        if($this->twoStepVerification && !Yii::$app->admin->isGuest && Yii::$app->admin->identity->authenticator) {
 
             $pagename = '';
             $getpage = parse_url($_SERVER['REQUEST_URI']);
